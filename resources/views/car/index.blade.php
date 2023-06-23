@@ -25,10 +25,7 @@
                     </div>
                     @if ($message = Session::get('success'))
                         <div class="alert alert-success">
-
                             <p>{{ $message }}</p>
-
-
                         </div>
                     @endif
 
@@ -38,14 +35,13 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>Id</th>
-
-										<th>Marca</th>
+                                        
 										<th>Modelo</th>
 										<th>N° de Chasis</th>
 										<th>Disposición</th>
 										<th>Tipo de combustible</th>
-										<th>Tipo de transmición</th>
-										<th>Tpo de motor</th>
+										<th>Tipo transmisión</th>
+										<th>Tipo de motor</th>
 										<th>Año Modelo</th>
 
                                         <th></th>
@@ -55,8 +51,7 @@
                                     @foreach ($cars as $car)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-
-											<td>{{ $car->brand }}</td>
+                                            
 											<td>{{ $car->model }}</td>
 											<td>{{ $car->n°_chasis }}</td>
 											<td>{{ $car->disposition }}</td>
@@ -67,11 +62,11 @@
 
                                             <td>
                                                 <form action="{{ route('cars.destroy',$car->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('cars.show',$car->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Mostrar') }}</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('cars.show',$car->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Enviar') }}</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('cars.edit',$car->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Borrar') }}</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Eliminar') }}</button>
                                                 </form>
                                             </td>
                                         </tr>

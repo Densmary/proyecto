@@ -57,39 +57,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="/" class="nav-item nav-link active">Home</a>
-                <a href="{{ route('clients.index') }}" class="nav-item nav-link">Clientes</a>
-                <a href="{{ route('operators.index') }}" class="nav-item nav-link">Operadores</a>
-
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Catálogo</a>
-                    <div class="dropdown-menu fade-up m-0">
-                <a href="{{ route('cars.index') }}" class="dropdown-item">Autos</a>
-                <a href="{{ route('products.index') }}" class="dropdown-item">Piezas</a>
-            </div>
-                    </div>
-
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pedidos</a>
-                        <div class="dropdown-menu fade-up m-0">
-                        <a href="{{ route('orders.index') }}" class="dropdown-item">Pedidos</a>
-                        <a href="{{ route('departures.index') }}" class="dropdown-item">Órdenes de producción</a>
-                <a href="{{ route('records.index') }}" class="dropdown-item">Registro</a>
-
-                </div>
-                        </div>
-
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Herramientas</a>
-                    <div class="dropdown-menu fade-up m-0">
-                <a href="{{ route('plantlines.index') }}" class="dropdown-item">Lineas</a>
-                <a href="{{ route('sheets.index') }}" class="dropdown-item">Chapa espesor</a>
-                <a href="{{ route('molds.index') }}" class="dropdown-item">Moldes</a>
-
-                    </div>
-                </div>
-            </div>
-            <a href="{{ route('login') }}" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Inicia Sesión<i class="fa fa-arrow-right ms-3"></i></a>
+               
+                
+                </li><a href="{{ route('login') }}" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Inicia Sesión<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->

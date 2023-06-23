@@ -48,7 +48,7 @@ class RecordController extends Controller
         $record = Record::create($request->all());
 
         return redirect()->route('records.index')
-            ->with('success', 'Record created successfully.');
+            ->with('success', 'Registro agregado.');
     }
 
     /**
@@ -91,7 +91,7 @@ class RecordController extends Controller
         $record->update($request->all());
 
         return redirect()->route('records.index')
-            ->with('success', 'Record updated successfully');
+            ->with('success', 'Registro actualizado');
     }
 
     /**
@@ -104,6 +104,6 @@ class RecordController extends Controller
         $record = Record::find($id)->delete();
 
         return redirect()->route('records.index')
-            ->with('success', 'Record deleted successfully');
+            ->with('success', 'Registro eliminado');
     }
 }

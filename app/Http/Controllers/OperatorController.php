@@ -48,7 +48,7 @@ class OperatorController extends Controller
         $operator = Operator::create($request->all());
 
         return redirect()->route('operators.index')
-            ->with('success', 'Operator created successfully.');
+            ->with('success', 'Operador creado con éxito.');
     }
 
     /**
@@ -91,7 +91,7 @@ class OperatorController extends Controller
         $operator->update($request->all());
 
         return redirect()->route('operators.index')
-            ->with('success', 'Operator updated successfully');
+            ->with('success', 'Operador actualizado con éxito');
     }
 
     /**
@@ -104,6 +104,6 @@ class OperatorController extends Controller
         $operator = Operator::find($id)->delete();
 
         return redirect()->route('operators.index')
-            ->with('success', 'Operator deleted successfully');
+            ->with('success', 'Operador eliminado con éxito');
     }
 }

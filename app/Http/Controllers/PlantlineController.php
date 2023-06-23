@@ -48,7 +48,7 @@ class PlantlineController extends Controller
         $plantline = Plantline::create($request->all());
 
         return redirect()->route('plantlines.index')
-            ->with('success', 'Plantline created successfully.');
+            ->with('success', 'Linea agregada con éxito.');
     }
 
     /**
@@ -91,7 +91,7 @@ class PlantlineController extends Controller
         $plantline->update($request->all());
 
         return redirect()->route('plantlines.index')
-            ->with('success', 'Plantline updated successfully');
+            ->with('success', 'Linea actualizada con éxito');
     }
 
     /**
@@ -104,6 +104,6 @@ class PlantlineController extends Controller
         $plantline = Plantline::find($id)->delete();
 
         return redirect()->route('plantlines.index')
-            ->with('success', 'Plantline deleted successfully');
+            ->with('success', 'Linea eliminada con éxito');
     }
 }

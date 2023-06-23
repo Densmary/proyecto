@@ -43,3 +43,11 @@ Route::resource('operators', OperatorController::class);
 Route::resource('records', RecordController::class);
 Route::resource('molds', MoldController::class);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

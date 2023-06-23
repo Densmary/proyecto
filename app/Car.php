@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
  * Class Car
  *
  * @property $id
- * @property $brand
  * @property $model
  * @property $n°_chasis
  * @property $disposition
@@ -27,7 +26,6 @@ class Car extends Model
 {
     
     static $rules = [
-		'brand' => 'required',
 		'model' => 'required',
 		'n°_chasis' => 'required',
 		'disposition' => 'required',
@@ -44,7 +42,7 @@ class Car extends Model
      *
      * @var array
      */
-    protected $fillable = ['brand','model','n°_chasis','disposition','fuel_type','transmission_type','engine_type','age_model'];
+    protected $fillable = ['model','n°_chasis','disposition','fuel_type','transmission_type','engine_type','age_model'];
 
 
     /**

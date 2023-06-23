@@ -18,7 +18,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('departures.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Agregar orden') }}
+                                  {{ __('Crear nueva') }}
                                 </a>
                               </div>
                         </div>
@@ -35,12 +35,13 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>Id</th>
-
+                                        
 										<th>N° de unidades</th>
-										<th>Orden de manufactura</th>
+										<th>Orden de manofactura</th>
 										<th>Costo de producción</th>
-										<th>Id Lineas</th>
-										<th>Id Productos</th>
+										<th>Id Pedido</th>
+										<th>Id Linea</th>
+										<th>Id Producto</th>
 
                                         <th></th>
                                     </tr>
@@ -49,10 +50,11 @@
                                     @foreach ($departures as $departure)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-
+                                            
 											<td>{{ $departure->n_units }}</td>
 											<td>{{ $departure->manufacturing_order }}</td>
 											<td>{{ $departure->production_cost }}</td>
+											<td>{{ $departure->id_orders }}</td>
 											<td>{{ $departure->id_plantlines }}</td>
 											<td>{{ $departure->id_products }}</td>
 

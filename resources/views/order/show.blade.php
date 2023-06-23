@@ -19,7 +19,11 @@
                     </div>
 
                     <div class="card-body">
-
+                        
+                        <div class="form-group">
+                            <strong>Id Productos:</strong>
+                            {{ $order->id_products }}
+                        </div>
                         <div class="form-group">
                             <strong>Cantidad requerida:</strong>
                             {{ $order->required_quantity }}
@@ -31,10 +35,6 @@
                         <div class="form-group">
                             <strong>Id Clientes:</strong>
                             {{ $order->id_clients }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Id Pedido:</strong>
-                            {{ $order->id_departures }}
                         </div>
 
                     </div>

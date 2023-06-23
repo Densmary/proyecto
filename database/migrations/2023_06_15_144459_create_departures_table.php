@@ -18,7 +18,7 @@ class CreateDeparturesTable extends Migration
             $table->string('n_units');
             $table->string('manufacturing_order');
             $table->string('production_cost');
-
+            $table->string('id_orders');
             $table->integer('id_plantlines')->unsigned();
             $table->foreign('id_plantlines')->references('id')->
             on('plantlines')->onDelete('cascade')->onUpdate('cascade');
@@ -26,6 +26,8 @@ class CreateDeparturesTable extends Migration
             $table->integer('id_products')->unsigned();
             $table->foreign('id_products')->references('id')->
             on('products')->onDelete('cascade')->onUpdate('cascade');
+
+         
         });
     }
 

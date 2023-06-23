@@ -48,7 +48,7 @@ class SheetController extends Controller
         $sheet = Sheet::create($request->all());
 
         return redirect()->route('sheets.index')
-            ->with('success', 'Sheet created successfully.');
+            ->with('success', 'Chapa agregada.');
     }
 
     /**
@@ -91,7 +91,7 @@ class SheetController extends Controller
         $sheet->update($request->all());
 
         return redirect()->route('sheets.index')
-            ->with('success', 'Sheet updated successfully');
+            ->with('success', 'Chapa actualizada');
     }
 
     /**
@@ -104,6 +104,6 @@ class SheetController extends Controller
         $sheet = Sheet::find($id)->delete();
 
         return redirect()->route('sheets.index')
-            ->with('success', 'Sheet deleted successfully');
+            ->with('success', 'Chapa eliminada');
     }
 }

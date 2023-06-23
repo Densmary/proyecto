@@ -48,7 +48,7 @@ class CarController extends Controller
         $car = Car::create($request->all());
 
         return redirect()->route('cars.index')
-            ->with('success', 'Carro agregado con éxito.');
+            ->with('success', 'Carro agregado.');
     }
 
     /**
@@ -91,7 +91,7 @@ class CarController extends Controller
         $car->update($request->all());
 
         return redirect()->route('cars.index')
-            ->with('success', 'Carro actualizado con éxito');
+            ->with('success', 'Carro actualizado');
     }
 
     /**
@@ -104,6 +104,6 @@ class CarController extends Controller
         $car = Car::find($id)->delete();
 
         return redirect()->route('cars.index')
-            ->with('success', 'Carro eliminado con éxito');
+            ->with('success', 'Carro eliminado');
     }
 }

@@ -48,7 +48,7 @@ class MoldController extends Controller
         $mold = Mold::create($request->all());
 
         return redirect()->route('molds.index')
-            ->with('success', 'Mold created successfully.');
+            ->with('success', 'Molde creado.');
     }
 
     /**
@@ -91,7 +91,7 @@ class MoldController extends Controller
         $mold->update($request->all());
 
         return redirect()->route('molds.index')
-            ->with('success', 'Mold updated successfully');
+            ->with('success', 'Molde actualizado');
     }
 
     /**
@@ -104,6 +104,6 @@ class MoldController extends Controller
         $mold = Mold::find($id)->delete();
 
         return redirect()->route('molds.index')
-            ->with('success', 'Mold deleted successfully');
+            ->with('success', 'Molde eliminado');
     }
 }

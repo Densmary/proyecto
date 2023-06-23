@@ -8,15 +8,15 @@ use Illuminate\Database\Eloquent\Model;
  * Class Order
  *
  * @property $id
+ * @property $id_products
  * @property $required_quantity
  * @property $date
  * @property $id_clients
- * @property $id_departures
  * @property $created_at
  * @property $updated_at
  *
  * @property Client $client
- * @property Departure $departure
+ * @property Product $product
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
@@ -24,10 +24,10 @@ class Order extends Model
 {
     
     static $rules = [
+		'id_products' => 'required',
 		'required_quantity' => 'required',
 		'date' => 'required',
 		'id_clients' => 'required',
-		'id_departures' => 'required',
     ];
 
     protected $perPage = 20;
@@ -37,7 +37,7 @@ class Order extends Model
      *
      * @var array
      */
-    protected $fillable = ['required_quantity','date','id_clients','id_departures'];
+    protected $fillable = ['id_products','required_quantity','date','id_clients'];
 
 
     /**
@@ -51,9 +51,9 @@ class Order extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function departure()
+    public function product()
     {
-        return $this->hasOne('App\Departure', 'id', 'id_departures');
+        return $this->hasOne('App\Product', 'id', 'id_products');
     }
     
 

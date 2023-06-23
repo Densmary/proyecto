@@ -1,13 +1,8 @@
-{{-- @section('content') --}}
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="utf-8">
-    <title>D-Musk</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+@section('content')
+
+    <head>
         <!-- Favicon -->
         <link href="img/favicon.ico" rel="icon">
 
@@ -20,24 +15,12 @@
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
         <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
-
         <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        {{-- <link href="css/bootstrap.min.css" rel="stylesheet"> --}}
 
         <!-- Template Stylesheet -->
         {{-- <link href="css/style.css" rel="stylesheet"> --}}
-
-        <!-- Fonts -->
-        <link rel="dns-prefetch" href="//fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-        <!-- Styles -->
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
-
-    <body>
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
@@ -69,17 +52,7 @@
 
                     </div>
                 </div>
-
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Herramientas</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="{{ route('plantlines.index') }}" class="dropdown-item">Lineas</a>
-                        <a href="{{ route('sheets.index') }}" class="dropdown-item">Chapa espesor</a>
-                        <a href="{{ route('molds.index') }}" class="dropdown-item">Moldes</a>
-
-                    </div> 
-                </div>
-
+                
                 <div class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -91,7 +64,7 @@
                         <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                            {{ __('Cerrar sesión') }}
+                            {{ __('Logout') }}
                         </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -99,6 +72,20 @@
                         </form>
                     </div>
                 </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Herramientas</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="{{ route('plantlines.index') }}" class="dropdown-item">Lineas</a>
+                        <a href="{{ route('sheets.index') }}" class="dropdown-item">Chapa espesor</a>
+                        <a href="{{ route('molds.index') }}" class="dropdown-item">Moldes</a>
+
+                    </div>
+
+                    
+                </div>
+                <li class="nav-item">
+
 
             </div>
         </div>
@@ -143,7 +130,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="img/da.png" alt="Image">
+                    <img class="w-100" src="img/da.pg" alt="Image">
                     <div class="carousel-caption d-flex align-items-center">
                         <div class="container">
                             <div class="row align-items-center justify-content-center justify-content-lg-start">
@@ -169,6 +156,4 @@
             </button>
         </div>
     </div>
-</body>
-</html>
-{{-- @endsection --}}
+@endsection

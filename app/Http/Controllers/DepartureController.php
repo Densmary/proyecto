@@ -48,7 +48,7 @@ class DepartureController extends Controller
         $departure = Departure::create($request->all());
 
         return redirect()->route('departures.index')
-            ->with('success', 'Departure created successfully.');
+            ->with('success', 'Orden de producción.');
     }
 
     /**

@@ -11,10 +11,10 @@ use Illuminate\Database\Eloquent\Model;
  * @property $n_units
  * @property $manufacturing_order
  * @property $production_cost
+ * @property $id_orders
  * @property $id_plantlines
  * @property $id_products
  *
- * @property Order[] $orders
  * @property Plantline $plantline
  * @property Product $product
  * @package App
@@ -27,6 +27,7 @@ class Departure extends Model
 		'n_units' => 'required',
 		'manufacturing_order' => 'required',
 		'production_cost' => 'required',
+		'id_orders' => 'required',
 		'id_plantlines' => 'required',
 		'id_products' => 'required',
     ];
@@ -38,17 +39,9 @@ class Departure extends Model
      *
      * @var array
      */
-    protected $fillable = ['n_units','manufacturing_order','production_cost','id_plantlines','id_products'];
+    protected $fillable = ['n_units','manufacturing_order','production_cost','id_orders','id_plantlines','id_products'];
 
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function orders()
-    {
-        return $this->hasMany('App\Order', 'id_departures', 'id');
-    }
-    
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */

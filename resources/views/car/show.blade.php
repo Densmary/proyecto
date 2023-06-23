@@ -11,45 +11,41 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">{{ __('Mostrar') }} Carro</span>
+                            <span class="card-title">{{ __('Show') }} Car</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('cars.index') }}"> {{ __('Atrás') }}</a>
+                            <a class="btn btn-primary" href="{{ route('cars.index') }}"> {{ __('Back') }}</a>
                         </div>
                     </div>
 
                     <div class="card-body">
-
+                        
                         <div class="form-group">
-                            <strong>Marca:</strong>
-                            {{ $car->brand }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Modelo:</strong>
+                            <strong>Model:</strong>
                             {{ $car->model }}
                         </div>
                         <div class="form-group">
-                            <strong>N° de Chasis:</strong>
+                            <strong>N° Chasis:</strong>
                             {{ $car->n°_chasis }}
                         </div>
                         <div class="form-group">
-                            <strong>Disposición:</strong>
+                            <strong>Disposition:</strong>
                             {{ $car->disposition }}
                         </div>
                         <div class="form-group">
-                            <strong>Tipo de combustible:</strong>
+                            <strong>Fuel Type:</strong>
                             {{ $car->fuel_type }}
                         </div>
                         <div class="form-group">
-                            <strong>Tipo de transmición:</strong>
+                            <strong>Transmission Type:</strong>
                             {{ $car->transmission_type }}
                         </div>
                         <div class="form-group">
-                            <strong>Tpo de motor:</strong>
+                            <strong>Engine Type:</strong>
                             {{ $car->engine_type }}
                         </div>
                         <div class="form-group">
-                            <strong>Año Modelo:</strong>
+                            <strong>Age Model:</strong>
                             {{ $car->age_model }}
                         </div>
 
